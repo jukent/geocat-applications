@@ -38,7 +38,7 @@ jobs:
     steps:
       - name: Checkout code
         if: inputs.build_from_code_artifact != 'true'
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7.0.1
 
       - name: set environment variables
         run: |
@@ -47,7 +47,7 @@ jobs:
       - name: Download code artifact
         id: get_code_artifact
         if: inputs.build_from_code_artifact == 'true'
-        uses: dawidd6/action-download-artifact@v6
+        uses: dawidd6/action-download-artifact@27e4ae67c24b67d3b54bc6d6a45475be1e28031b # v26
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           workflow: ${{ inputs.workflow }}
@@ -64,7 +64,7 @@ jobs:
       - name: environment setup
         id: env-setup
         continue-on-error: true
-        uses: mamba-org/setup-micromamba@v2
+        uses: mamba-org/setup-micromamba@f457c30a868e4760d3a6fcea5f25dc655b8edf39 # v3.2.1
         with:
           environment-file: environment.yml
           cache-environment: true
@@ -72,7 +72,7 @@ jobs:
 
       - name: retry environment set up if failed
         if: steps.env-setup.outcome == 'failure'
-        uses: mamba-org/setup-micromamba@v2
+        uses: mamba-org/setup-micromamba@f457c30a868e4760d3a6fcea5f25dc655b8edf39 # v3.2.1
         with:
           download-micromamba: false
           environment-file: environment.yml
@@ -93,7 +93,7 @@ jobs:
           zip -r book.zip ./_build/html/
 
       - name: Upload zipped book artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: ${{ inputs.artifact_name }}
           path: ./book.zip

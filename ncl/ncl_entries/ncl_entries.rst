@@ -28,6 +28,7 @@ and links to additional resources and references.
                 - `Trigonometry <trigonometry.ipynb>`_
                 - `General applied math <general_applied_math.ipynb>`_
                 - `Spectral analysis <spectral_analysis.ipynb>`_
+                - `Fourier Analysis <fourier_analysis.ipynb>`_
 
     .. grid-item::
 
@@ -38,3 +39,13 @@ and links to additional resources and references.
 
                 - `Climatology <climatology.ipynb>`_
                 - `Meteorology <meteorology.ipynb>`_
+                - `Great circle <great_circle.ipynb>`_
+
+    .. grid-item::
+
+        .. grid:: 1
+            :gutter: 1
+
+            .. card:: File I/O
+
+                - `Reading Files <file_io.ipynb>`_

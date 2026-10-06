@@ -3,6 +3,7 @@ channels:
   - conda-forge
 dependencies:
   # Content
+  - astropy
   - cartopy
   - geocat-comp
   - geocat-datafiles
@@ -13,15 +14,19 @@ dependencies:
   - pandas
   - python
   - pythia-datasets
+  - uxarray
   - xarray
   - scipy
+  - ultraplot # curly vectors
 
   # Jupyter
   - ipykernel
   - ipython
   - jupyter_client
+  - jupytext
 
   # Infrastructure
+  - itables
   - myst-nb
   - nbsphinx
   - pre-commit

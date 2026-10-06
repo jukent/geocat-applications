@@ -26,6 +26,7 @@ Python resources by category with relevant context and links to additional resou
 
                 - `General applied math <general_applied_math.ipynb>`__
                 - `Spectral analysis <spectral_analysis.ipynb>`__
+                - `Curly vector <curly_vector.ipynb>`__
 
     .. grid-item::
 
@@ -34,5 +35,6 @@ Python resources by category with relevant context and links to additional resou
 
             .. card:: Geoscience
 
-                - `Climatology <climatology.ipynb>`_
+                - `Climatology <climatology.ipynb>`__
                 - `Humid heat metrics <humid_heat_metrics.ipynb>`__
+                - `Madden-Julian Oscillation <mjo.ipynb>`__

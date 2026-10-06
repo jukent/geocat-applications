@@ -30,7 +30,7 @@ jobs:
       run:
         shell: bash -l {0}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7.0.1
 
       - name: fetch repo name
         id: repo-name
@@ -41,7 +41,7 @@ jobs:
           echo "comment_message=Meowdy! See your PR preview:" >> $GITHUB_ENV
 
       - name: Find preview comment
-        uses: peter-evans/find-comment@v3
+        uses: peter-evans/find-comment@b30e6a3c0ed37e7c023ccd3f1db5c6c0b0c23aad # v3
         id: fc
         with:
           issue-number: '${{ inputs.pr_number }}'
@@ -51,7 +51,7 @@ jobs:
       - name: Create preview comment
         if: steps.fc.outputs.comment-id == ''
         id: create-comment
-        uses: peter-evans/create-or-update-comment@v4
+        uses: peter-evans/create-or-update-comment@e8674b075228eee787fea43ef493e45ece1004c9 # v4
         with:
           issue-number: ${{ inputs.pr_number }}
           body: |
@@ -84,7 +84,7 @@ jobs:
           inputs.no_update == 'false'
           && steps.fc.outputs.comment-id != ''
           && github.event.workflow_run.conclusion != 'failure'
-        uses: peter-evans/create-or-update-comment@v4
+        uses: peter-evans/create-or-update-comment@e8674b075228eee787fea43ef493e45ece1004c9 # v4
         with:
           comment-id: ${{ steps.fc.outputs.comment-id }}
           edit-mode: replace
@@ -98,7 +98,7 @@ jobs:
           inputs.no_update == 'false'
           && steps.fc.outputs.comment-id != ''
           && github.event.workflow_run.conclusion == 'failure'
-        uses: peter-evans/create-or-update-comment@v4
+        uses: peter-evans/create-or-update-comment@e8674b075228eee787fea43ef493e45ece1004c9 # v4
         with:
           comment-id: ${{ steps.fc.outputs.comment-id }}
           edit-mode: replace

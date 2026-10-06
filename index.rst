@@ -54,6 +54,7 @@ Python Applications
 
                 - `General applied math <./applications/general_applied_math.ipynb>`__
                 - `Spectral analysis <./applications/spectral_analysis.ipynb>`__
+                - `Curly vector <./applications/curly_vector.ipynb>`__
 
     .. grid-item::
 
@@ -64,6 +65,7 @@ Python Applications
 
                 - `Climatology <./applications/climatology.ipynb>`_
                 - `Humid heat metrics <./applications/humid_heat_metrics.ipynb>`__
+                - `Madden-Julian Oscillation <./applications/mjo.ipynb>`__
 
 .. TIP::
     If you're looking for NCL to Python examples, please visit :ref:`ncl_applications`.
